@@ -5,7 +5,7 @@ esattamente come quello di [HackInBo](https://hackinbo.it) 2019 - Winter.
 
 Oltre a questo vi servirà un nodo radio da nascondere da qualche parte. Per il
 firmware e le istruzioni potete basarvi su [quest'altro
-repository](https://github.com/mcts-hib19win/mcts-hib19win-radio).
+repository](https://github.com/phretor/mcts-hib19win-radio).
 
 # Utilizzo
 
