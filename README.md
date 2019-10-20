@@ -1,7 +1,7 @@
 # Mini Capture the Signal (mCTS) per HackInBo 2019 - Winter
 
 Questo repository contiene l'applicazione web per riprodurre gestire un mCTS
-esattamente come quello di HackInBo 2019 - Winter.
+esattamente come quello di [HackInBo](https://hackinbo.it) 2019 - Winter.
 
 Oltre a questo vi servirà un nodo radio da nascondere da qualche parte. Per il
 firmware e le istruzioni potete basarvi su [quest'altro
