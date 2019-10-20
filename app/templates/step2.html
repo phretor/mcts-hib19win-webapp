@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block col %}
+{{ super() }}
+
+<h2>Livello 2</h2>
+<p>A questo punto avrai sicuramente decodificato il segnale che sto
+    trasmettendo periodicamente ogni secondo, e saprai dirmi l'ID che ci ho
+    nascosto dentro.</p>
+
+<form method="post">
+    <input class="u-full-width" type="text" placeholder="ID" id="flag" name="flag">
+    <input class="button-primary" type="submit" value="Conferma">
+    <input type="hidden" name="step" value="step2">
+    {% if submitted %}
+    <p><strong style="text-color: red;">Mi spiace, ma non è corretto!</strong></p>
+    {% endif %}
+</form>
+{% endblock %}

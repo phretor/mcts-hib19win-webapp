@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block col %}
+<h2>Livello 1</h2>
+<p>Scarica <a href="{{ file_url }}">questo file</a>, che contiene il segnale di
+    una trasmissione a 400MHz, catturato con una SDR a 128000 campioni al
+    secondo.</p>
+
+<p>Per passare al Livello 2 dovrai scoprire le informazioni nascoste nel
+    segnale, che riveleranno la prossima frequenza a cui sintonizzarti e altri
+    dettagli utili per decodificare il prossimo segnale.</p>
+
+<p>Suggerimento: inizia con un analizzatore di spettro 👻</p>
+
+<p>Una volta trovato il prossimo segnale, passa al livello successivo.</p>
+
+<a class="button" href="/step2">Livello 2</a>
+{% endblock %}

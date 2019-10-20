@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    app:
+        image: python:alpine
+        container_name: app
+        volumes:
+            - ./:/code
+        command: /bin/sh -c "
+            cd /code &&
+            pip install -r requirements.pip &&
+            gunicorn -b 0.0.0.0:5000 app.main:app
+            "
+
+    nginx:
+        image: nginx:alpine
+        volumes:
+            - ./app/static:/usr/share/nginx/html:ro
+            - ./conf/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        ports:
+            - 8080:80

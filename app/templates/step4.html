@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block col %}
+{{ super() }}
+
+<h2>Livello 4</h2>
+<p>Ottimo lavoro!</p>
+
+<p>Devi sapere che il trasmettitore che hai trovato è anche un ricevitore: se
+    gli mandi il messaggio giusto, ti risponde con l'ultimo "segreto" che ti
+    serve per completare il gioco.</p>
+
+<p>Per fare questo devi trasmettere un segnale identico (in frequenza e banda)
+    a quello che hai ricevuto, cambiando però il payload, ovvero quello che
+    vedi subito dopo la sync word (<code>{{ syncword }}</code>).</p>
+
+<p>Il payload giusto da trasmettere è <code>{{ payload }}</code>. Se accettato e corretto,
+    vedrai trasmettere per 16 volte consecutive un altro segnale, che conterrà
+    il segreto che sai cercando.</p>
+
+<form method="post">
+    <input class="u-full-width" type="text" placeholder="Ultimo segreto" id="flag" name="flag">
+    <input class="button-primary" type="submit" value="Conferma">
+    <input type="hidden" name="step" value="step4">
+    {% if submitted %}
+    <p><strong style="text-color: red;">Mi spiace, ma non è corretto!</strong></p>
+    {% endif %}
+</form>
+{% endblock %}

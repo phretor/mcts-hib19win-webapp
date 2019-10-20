@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+{% block col %}
+{{ super() }}
+
+<h2>Livello 3</h2>
+<p>A questo punto avrai trovato anche l'ID corretto, altrimenti non saresti
+    qui.</p>
+
+<p>Per passare al livello successivo devi trovare la sorgente della
+    trasmissione: è un piccolo trasmettitore nascosto in questa stanza o nella
+    stanza accanto. Segui l'intensità del segnale e lo troverai!</p>
+
+<p>Quando l'avrai trovato, saprai dirmi cosa c'è scritto sull'etichetta!
+    Lascialo dov'è, mi raccomando: servirà per proseguire il gioco!</p>
+
+<form method="post">
+    <input class="u-full-width" type="text" placeholder="Codice sull'etichetta" id="flag" name="flag">
+    <input class="button-primary" type="submit" value="Conferma">
+    <input type="hidden" name="step" value="step3">
+    {% if submitted %}
+    <p><strong style="text-color: red;">Mi spiace, ma non è corretto!</strong></p>
+    {% endif %}
+</form>
+{% endblock %}

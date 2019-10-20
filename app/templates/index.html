@@ -1,0 +1,55 @@
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <title>Mini Capture the Signal (mCTS) per HackInBo 2019 - Winter</title>
+  <meta name="description" content="Mini Capture the Signal (mCTS) per HackInBo 2019 - Winter">
+  <meta name="author" content="Federico Maggi - @phretor - https://maggi.cc / https://ggad.it">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}" />
+
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+<body>
+
+  <div class="container">
+
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h1>Benvenuti!</h1>
+        <p>Benvenuti a questo Mini Capture the Signal (mCTS) per HackInBo 2019 - Winter!</p>
+
+        <p>Vediamo chi riesce ad arrivare fino alla fine, scoprendo i dati
+            nascosti in questi segnali radio.</p>
+
+        <p><strong>Cosa serve per giocare? </strong> Una SDR con relativo
+            software (e.g., GQRX, URH, GNURadio).</p>
+
+        <p><strong>Nota. </strong>No, non è da veri duri provare a vincere
+            cercando di bucare questa povera webapp, che sta obiettivamente
+            insieme con lo scotch, visto l'ho messa insieme in poco tempo
+        🙂</p>
+      </div>
+      <div class="one-half column" style="margin-top: 25%">
+        {% block col %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+</body>
+</html>
+{% endblock %}
