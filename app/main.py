@@ -35,11 +35,11 @@ def solve():
     flag = request.form.get('flag', '')
     step = request.form.get('step', '')
 
-    if step == "step2" and flag:
+    if step == "step2":
         return step2solve(flag)
-    elif step == "step3" and flag:
+    elif step == "step3":
         return step3solve(flag)
-    elif step == "step4" and flag:
+    elif step == "step4":
         return step4solve(flag)
     else:
         return render_template(
@@ -70,6 +70,7 @@ def step3solve(flag):
         return render_template(
                 'step4.html',
                 tx_repeat=TX_REPEAT,
+                tx_delay='{:.1f}'.format(TX_DELAY/1000.0),
                 payload=PAYLOAD)
 
 
@@ -78,6 +79,7 @@ def step4solve(flag):
         return render_template(
                 'step4.html',
                 tx_repeat=TX_REPEAT,
+                tx_delay='{:.1f}'.format(TX_DELAY/1000.0),
                 payload=PAYLOAD,
                 submitted=True)
     else:
