@@ -10,13 +10,19 @@
     gli mandi il messaggio giusto, ti risponde con l'ultimo "segreto" che ti
     serve per completare il gioco.</p>
 
-<p>Per fare questo devi trasmettere un segnale identico (in frequenza e banda)
-    a quello che hai ricevuto, cambiando però il payload, ovvero quello che
-    vedi subito dopo la sync word (<code>{{ syncword }}</code>).</p>
+<p><strong>Leggi bene:</strong> Per fare questo devi trasmettere un segnale
+    identico (stessa frequenza, banda, modulazione) a quello che hai ricevuto,
+    cambiando però il campo dati, sostituendo l'ID che trasmette con
+        <code>{{ payload }}</code>, ottenendo un messaggio della <strong>stessa
+            lunghezza (è importante!)</strong>.</p>
 
-<p>Il payload giusto da trasmettere è <code>{{ payload }}</code>. Se accettato e corretto,
-    vedrai trasmettere per 16 volte consecutive un altro segnale, che conterrà
-    il segreto che sai cercando.</p>
+<p>Se il pacchetto così generato e trasmesso verrà accettato, dopo {{}} secondi
+    il trasmettitore trasmetterà un altro segnale per {{tx_repeat}} volte
+    consecutive, che conterrà il segreto che sai cercando.</p>
+
+<p><strong>Attenzione:</strong> Le trasmissioni sono visibili a tutti, quindi
+    una volta che avrai preparato il pacchetto da inviare, stai pronto a
+    ricevere dopo pochi istanti, perché tutti potranno ricevere contemporaneamente!</p>
 
 <form method="post">
     <input class="u-full-width" type="text" placeholder="Ultimo segreto" id="flag" name="flag">
