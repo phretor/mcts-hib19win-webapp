@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, render_template
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -85,3 +86,7 @@ def step4solve(flag):
     else:
         return render_template(
                 'step5.html')
+
+
+if __name__ == '__main__':
+    serve(app, host='0.0.0.0', port=os.environ.get('FLASK_PORT', 5000))
