@@ -6,11 +6,7 @@ services:
         container_name: app
         volumes:
             - ./:/code
-        command: /bin/sh -c "
-            cd /code &&
-            pip install -r requirements.pip &&
-            gunicorn -b 0.0.0.0:5000 app.main:app
-            "
+        command: /bin/sh -c "cd /code && pip install -r requirements.pip && python app/main.py"
         env_file:
             - .env
 
